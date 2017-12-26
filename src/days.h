@@ -2,6 +2,7 @@
 #include <fstream>
 #include <iostream>
 #include <iterator>
+#include <openssl/md5.h>
 #include <set>
 #include <sstream>
 #include <string>

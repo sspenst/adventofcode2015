@@ -1,5 +1,2 @@
-Debug
-*.opensdf
-*.sdf
-*.suo
-*.user
+aoc2015
+bin
