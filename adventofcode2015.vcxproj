@@ -80,7 +80,7 @@
     <ClCompile Include="src\day01.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="days.h" />
+    <ClInclude Include="src\days.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

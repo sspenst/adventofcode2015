@@ -23,7 +23,7 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="days.h">
+    <ClInclude Include="src\days.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
