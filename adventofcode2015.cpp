@@ -1,12 +1,9 @@
 // adventofcode2015.cpp : Defines the entry point for the console application.
 
-#include <iostream>
-
-using namespace std;
+#include "days.h"
 
 int main(int argc, char* argv[])
 {
-	cout << "hi" << endl;
+	day01();
 	return 0;
 }
-
