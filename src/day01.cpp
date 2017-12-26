@@ -10,12 +10,16 @@ void day01() {
 
 	for (char & c : text) {
 		// part 1: floor counting
-		if (c == '(') floor += 1;
-		else if (c == ')') floor -= 1;
+		if (c == '(')
+			floor += 1;
+		else if (c == ')')
+			floor -= 1;
 		
 		// part 2: increment until total falls below 0
-		if (increment_pos) pos += 1;
-		if (floor < 0) increment_pos = false;
+		if (increment_pos)
+			pos += 1;
+		if (floor < 0)
+			increment_pos = false;
 	}
 
 	cout << "Part 1: " << floor << endl;

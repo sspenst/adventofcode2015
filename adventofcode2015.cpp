@@ -1,16 +1,17 @@
-// adventofcode2015.cpp : Defines the entry point for the console application.
-
 #include "src/days.h"
 
-day_fn day_fns[] = { day01 };
+vector<day_fn> day_fns = { day01, day02 };
 
-int main(int argc, char* argv[])
-{
+int main(int argc, char* argv[]) {
 	// set the day to be executed
-	int day = 1;
-	if (argc == 2) day = atoi(argv[1]);
+	unsigned day = 2;
+	if (argc == 2)
+		day = atoi(argv[1]);
 
 	// call the corresponding day
+	if (day <= 0 || day > day_fns.size())
+		cout << "Invalid day specified." << endl;
+
 	day_fns[day - 1]();
 	return 0;
 }

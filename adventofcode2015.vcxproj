@@ -77,7 +77,9 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="adventofcode2015.cpp" />
+    <ClCompile Include="src\aoclib.cpp" />
     <ClCompile Include="src\day01.cpp" />
+    <ClCompile Include="src\day02.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\days.h" />
