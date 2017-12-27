@@ -3,12 +3,13 @@
 vector<day_fn> day_fns = {
 	day01,
 	day02,
-	day03
+	day03,
+	day04
 };
 
 int main(int argc, char* argv[]) {
 	// set the day to be executed
-	unsigned day = 3;
+	unsigned day = 1;
 	if (argc == 2)
 		day = atoi(argv[1]);
 
