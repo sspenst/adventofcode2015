@@ -9,16 +9,16 @@ unsigned part1(string input) {
 	for (char & c : input) {
 		switch (c) {
 		case '^':
-			y += 1;
+			y++;
 			break;
 		case '>':
-			x += 1;
+			x++;
 			break;
 		case 'v':
-			y -= 1;
+			y--;
 			break;
 		case '<':
-			x -= 1;
+			x--;
 			break;
 		}
 		locations.insert(make_tuple(x, y));
@@ -40,16 +40,16 @@ unsigned part2(string input) {
 
 		switch (c) {
 		case '^':
-			y += 1;
+			y++;
 			break;
 		case '>':
-			x += 1;
+			x++;
 			break;
 		case 'v':
-			y -= 1;
+			y--;
 			break;
 		case '<':
-			x -= 1;
+			x--;
 			break;
 		}
 

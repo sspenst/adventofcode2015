@@ -1,10 +1,13 @@
 #include "days.h"
 
-// run the specified day and return the execution time
+// run the specified day and return the elapsed time
 double run_day(unsigned day) {
+	// time the execution of the specified day
 	auto start_time = chrono::high_resolution_clock::now();
 	day_fns[day - 1]();
 	auto finish_time = chrono::high_resolution_clock::now();
+
+	// calculate the elapsed time
 	chrono::duration<double> elapsed = finish_time - start_time;
 	cout << "Elapsed time: " << elapsed.count() << "s" << endl;
 	return elapsed.count();

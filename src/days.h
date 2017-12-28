@@ -43,10 +43,4 @@ void day25();
 
 vector<string> split(const string &, char);
 
-vector<day_fn> day_fns = {
-    day01,
-    day02,
-    day03,
-    day04,
-    day05
-};
+extern vector<day_fn> day_fns;

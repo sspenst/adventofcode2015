@@ -26,6 +26,6 @@ void day04() {
             break;
         }
 
-        num += 1;
+        num++;
     }
 }

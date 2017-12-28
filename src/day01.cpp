@@ -10,13 +10,13 @@ void day01() {
 	for (char & c : text) {
 		// part 1: floor counting
 		if (c == '(')
-			floor += 1;
+			floor++;
 		else if (c == ')')
-			floor -= 1;
+			floor--;
 
 		// part 2: increment until total falls below 0
 		if (increment_pos)
-			pos += 1;
+			pos++;
 		if (floor < 0)
 			increment_pos = false;
 	}
