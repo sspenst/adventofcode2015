@@ -1,12 +1,14 @@
 #include "days.h"
 
-vector<day_fn> day_fns = {
-	day01,
-	day02,
-	day03,
-	day04,
-	day05
-};
+// run the specified day and return the execution time
+double run_day(unsigned day) {
+	auto start_time = chrono::high_resolution_clock::now();
+	day_fns[day - 1]();
+	auto finish_time = chrono::high_resolution_clock::now();
+	chrono::duration<double> elapsed = finish_time - start_time;
+	cout << "Elapsed time: " << elapsed.count() << "s" << endl;
+	return elapsed.count();
+}
 
 int main(int argc, char* argv[]) {
 	// set the day to be executed
@@ -16,12 +18,16 @@ int main(int argc, char* argv[]) {
 
 	// if day is unspecified or 0, run all days
 	if (day == 0) {
-		for (unsigned i = 1; i <= day_fns.size(); i++) {
-			cout << "Day " << i << ":" << endl;
-			day_fns[i - 1]();
-			if (i != day_fns.size())
-				cout << endl;
+		double total_time = 0;
+
+		for (unsigned d = 1; d <= day_fns.size(); d++) {
+			cout << "Day " << d << ":" << endl;
+			total_time += run_day(d);
+			cout << endl;
 		}
+
+		cout << "Average time: " << total_time / day_fns.size() << "s" << endl;
+		cout << "  Total time: " << total_time << "s" << endl;
 		return 0;
 	}
 
@@ -31,8 +37,7 @@ int main(int argc, char* argv[]) {
 		return 1;
 	}
 
-	// run the corresponding day
-	day_fns[day - 1]();
+	run_day(day);
 
 	return 0;
 }
