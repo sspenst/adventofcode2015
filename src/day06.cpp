@@ -1,7 +1,7 @@
 #include "days.h"
 
 void apply_inst(bool lights1[][1000], unsigned lights2[][1000], string inst) {
-    vector<string> words = split(inst, ' ');
+    vector<string> words = split(inst, " ");
     unsigned i = 0;
     unsigned op = 0; // 0 is turn off, 1 is turn on, 2 is toggle
     unsigned x1, y1, x2, y2;
@@ -16,12 +16,12 @@ void apply_inst(bool lights1[][1000], unsigned lights2[][1000], string inst) {
     }
 
     // get start coords
-    vector<string> start = split(words[i++], ',');
+    vector<string> start = split(words[i++], ",");
     x1 = stoi(start[0]);
     y1 = stoi(start[1]);
 
     // get finish coords
-    vector<string> finish = split(words[++i], ',');
+    vector<string> finish = split(words[++i], ",");
     x2 = stoi(finish[0]);
     y2 = stoi(finish[1]);
 

@@ -3,6 +3,7 @@
 #include <fstream>
 #include <iostream>
 #include <iterator>
+#include <map>
 #include <openssl/md5.h>
 #include <set>
 #include <sstream>
@@ -41,6 +42,7 @@ void day23();
 void day24();
 void day25();
 
-vector<string> split(const string &, char);
+vector<string> split(string, string);
+string strip(string &);
 
 extern vector<day_fn> day_fns;

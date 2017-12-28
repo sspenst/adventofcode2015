@@ -7,7 +7,7 @@ void day02() {
 	unsigned ribbon = 0;
 
 	while (getline(infile, line)) {
-		vector<string> dimensions = split(line, 'x');
+		vector<string> dimensions = split(line, "x");
 		unsigned l = stoi(dimensions[0]);
 		unsigned w = stoi(dimensions[1]);
 		unsigned h = stoi(dimensions[2]);
