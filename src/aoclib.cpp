@@ -10,7 +10,8 @@ vector<day_fn> day_fns = {
     day07,
     day08,
     day09,
-    day10
+    day10,
+    day11
 };
 
 vector<string> split(string s, string delim) {
