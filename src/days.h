@@ -4,16 +4,19 @@
 #include <fstream>
 #include <iostream>
 #include <iterator>
+#include <json/src/json.hpp>
 #include <map>
 #include <openssl/md5.h>
 #include <set>
 #include <sstream>
 #include <string>
 #include <string.h>
+#include <typeinfo>
 #include <tuple>
 #include <vector>
 
 using namespace std;
+using json = nlohmann::json;
 
 typedef void(*day_fn)(void);
 
